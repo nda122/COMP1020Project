@@ -37,29 +37,44 @@ class Graph{
         this.isDirected = true;
         adjacencyList = new ArrayList[V];
     }
-    public 
-    public Graph(int V,int E){
+    public Graph(int V, boolean isWeighted, boolean isDirected){
+        this.V = V;
+        this.isWeighted = isWeighted;
+        this.isDirected = isDirected;
+        adjacencyList = new ArrayList[V];
+    }
+    public Graph(int V,boolean isWeighted, boolean isDirected, int E){
         Scanner input = new Scanner(System.in);
         this.V = V;
+        this.isWeighted = isWeighted;
+        this.isDirected = isDirected;
         adjacencyList = new ArrayList[V];
         for(int i=0;i<E;i++){
             int u = input.nextInt();
             int v = input.nextInt();
-            int w = input.nextInt();
+            int w = 1;
+            if(isWeighted) w = input.nextInt();
             addEdge(u, v, w);
         }
         input.close();
         
     }
+    public void addEdge(int u, int v) {     
+        int w = 1;
+        this.E++;
+        adjacencyList[u].add(new Pair(v, w));
+        if(isDirected) adjacencyList[v].add(new Pair(u, w));
+        Edges.add(new WeightedEdge(u, v, w));
+    }
     public void addEdge(int u, int v, int w) {     
         this.E++;
         adjacencyList[u].add(new Pair(v, w));
-        adjacencyList[v].add(new Pair(u, w));
+        if(isDirected) adjacencyList[v].add(new Pair(u, w));
         Edges.add(new WeightedEdge(u, v, w));
     }
 
 }
 
-public class tmp {
+public class AnotherApproach {
     
 }
