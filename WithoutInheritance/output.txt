@@ -1,0 +1,20 @@
+ID of the new graph is 1
+ID of the new graph is 2
+ID of the new graph is 3
+MST weight: 17
+MST weight: 44
+Shortest path distances from node 0: [0, 1, 2, 3, 4, 5, 6]
+Shortest path distances from node 0: [0, 4, 8, 11, 18, 24, 25, 30, 32, 42]
+Graph 2 has cycle: true
+Graph 3 has cycle: false
+Topological Sorting: [6, 5, 4, 3, 2, 1, 0]
+Graph contains a cycle, topological sorting is not possible.
+Graph 1 is bipartite: true
+Graph 2 is bipartite: true
+Graph ID: 1
+Graph ID: 2
+Graph ID: 3
+Bye bye
+daylataikhoangithubcuanguyendaian
+git config --global user.name "nda122"
+git config --global user.email "nguyendaian1202@gmail.com"
