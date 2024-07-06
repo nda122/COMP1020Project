@@ -1,6 +1,6 @@
 package Termproject;
 
-class DisjointSet {
+public class DisjointSet {
     int capacity;
     int[] parent, rank, setSize;
     int numSet;
